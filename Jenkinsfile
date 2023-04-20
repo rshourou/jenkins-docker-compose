@@ -1,11 +1,11 @@
 pipeline {
-    agent any 
+    agent any
     stages {
         stage("Verify tooling") {
             steps {
                 sh ''' 
-                docker info
-                docker version
+                sudo docker info
+                sudo docker version
                 docker compose version
                 curl --version
                 jq --version
